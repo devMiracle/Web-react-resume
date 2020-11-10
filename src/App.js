@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import resume from './components/resume'
+import Name from './components/name'
+import Photo from './components/photo'
+import Date from './components/date'
+import Skills from './components/skills'
+import Character from './components/character'
+import Wishes from './components/wishes'
+import './app.css'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='my-container'>
+      <div className='my-resume'>
+        <Name name={resume.name}/>
+        <Photo photo={resume.photo}/>
+        <Date date={resume.date}/>
+        <Skills skills={resume.skills}/>
+        <Character character={resume.character}/>
+        <Wishes wishes={resume.wishes}/>
+      </div>
     </div>
   );
 }
 
 export default App;
+
